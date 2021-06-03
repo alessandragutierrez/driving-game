@@ -9,32 +9,28 @@ function turnCar(event) {
 }
 
 function turnRight() {
-  var ArrowRight = 39;
-  if (event.which !== ArrowRight) {
+  if (event.key !== 'ArrowRight') {
     return;
   }
   $car.className = '';
 }
 
 function turnLeft() {
-  var ArrowLeft = 37;
-  if (event.which !== ArrowLeft) {
+  if (event.key !== 'ArrowLeft') {
     return;
   }
   $car.className = 'face-left';
 }
 
 function turnUp() {
-  var ArrowUp = 38;
-  if (event.which !== ArrowUp) {
+  if (event.key !== 'ArrowUp') {
     return;
   }
   $car.className = 'face-up';
 }
 
 function turnDown() {
-  var ArrowDown = 40;
-  if (event.which !== ArrowDown) {
+  if (event.key !== 'ArrowDown') {
     return;
   }
   $car.className = 'face-down';
