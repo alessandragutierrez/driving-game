@@ -44,6 +44,7 @@ function startCar() {
   if (event.key !== ' ') {
     return;
   }
+  coordinates.x = coordinates.x + 3;
   $carContainer.style.left = coordinates.x + 'px';
   $carContainer.style.top = coordinates.y + 'px';
 }
