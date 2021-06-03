@@ -2,12 +2,13 @@
 
 var $car = document.querySelector('img');
 
-document.addEventListener('keydown', turnCar);
-function turnCar(event) {
+document.addEventListener('keydown', moveCar);
+function moveCar(event) {
   turnRight();
   turnLeft();
   turnUp();
   turnDown();
+  startCar();
 }
 
 function turnRight() {
@@ -36,4 +37,11 @@ function turnDown() {
     return;
   }
   $car.className = 'face-down';
+}
+
+function startCar() {
+  if (event.key !== ' ') {
+    return;
+  }
+  console.log('a space');
 }
