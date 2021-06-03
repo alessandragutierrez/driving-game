@@ -44,7 +44,9 @@ function startCar() {
   if (event.key !== ' ') {
     return;
   }
-  coordinates.x = coordinates.x + 3;
-  $carContainer.style.left = coordinates.x + 'px';
-  $carContainer.style.top = coordinates.y + 'px';
+  var intervalID = setInterval(function () {
+    coordinates.x = coordinates.x + 5;
+    $carContainer.style.left = coordinates.x + 'px';
+    $carContainer.style.top = coordinates.y + 'px';
+  }, 16);
 }
