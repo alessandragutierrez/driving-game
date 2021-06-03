@@ -5,39 +5,20 @@ var $car = document.querySelector('img');
 
 document.addEventListener('keydown', moveCar);
 function moveCar(event) {
-  turnRight();
-  turnLeft();
-  turnUp();
-  turnDown();
+  turnCar();
   startCar();
 }
 
-function turnRight() {
-  if (event.key !== 'ArrowRight') {
-    return;
+function turnCar() {
+  if (event.key === 'ArrowRight') {
+    $car.className = '';
+  } else if (event.key === 'ArrowLeft') {
+    $car.className = 'face-left';
+  } else if (event.key === 'ArrowUp') {
+    $car.className = 'face-up';
+  } else if (event.key === 'ArrowDown') {
+    $car.className = 'face-down';
   }
-  $car.className = '';
-}
-
-function turnLeft() {
-  if (event.key !== 'ArrowLeft') {
-    return;
-  }
-  $car.className = 'face-left';
-}
-
-function turnUp() {
-  if (event.key !== 'ArrowUp') {
-    return;
-  }
-  $car.className = 'face-up';
-}
-
-function turnDown() {
-  if (event.key !== 'ArrowDown') {
-    return;
-  }
-  $car.className = 'face-down';
 }
 
 function startCar() {

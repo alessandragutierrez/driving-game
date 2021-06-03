@@ -22,10 +22,6 @@ img {
   transition: 0.5s;
 }
 
-img.face-right {
-  transform: rotate(360deg);
-}
-
 img.face-up {
   transform: rotate(270deg);
 }
