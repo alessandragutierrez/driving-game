@@ -1,3 +1,5 @@
+/* global coordinates */
+
 var $car = document.querySelector('img');
 
 document.addEventListener('keydown', turnCar);
