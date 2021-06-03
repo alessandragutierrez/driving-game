@@ -26,14 +26,14 @@ img.face-right {
   transform: rotate(360deg);
 }
 
-img.face-down {
-  transform: rotate(90deg);
+img.face-up {
+  transform: rotate(270deg);
 }
 
 img.face-left {
   transform: rotate(180deg);
 }
 
-img.face-up {
-  transform: rotate(270deg);
+img.face-down {
+  transform: rotate(90deg);
 }
