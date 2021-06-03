@@ -1,4 +1,4 @@
-/* global coordinates */
+/* global data */
 
 var $carContainer = document.querySelector('.car-container');
 var $car = document.querySelector('img');
@@ -26,8 +26,8 @@ function startCar() {
     return;
   }
   var intervalID = setInterval(function () {
-    coordinates.x = coordinates.x + 5;
-    $carContainer.style.left = coordinates.x + 'px';
-    $carContainer.style.top = coordinates.y + 'px';
+    data.xCoordinates += 5;
+    $carContainer.style.left = data.xCoordinates + 'px';
+    $carContainer.style.top = data.yCoordinates + 'px';
   }, 16);
 }
