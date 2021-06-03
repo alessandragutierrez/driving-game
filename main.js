@@ -1,5 +1,6 @@
 /* global coordinates */
 
+var $carContainer = document.querySelector('.car-container');
 var $car = document.querySelector('img');
 
 document.addEventListener('keydown', moveCar);
@@ -43,5 +44,6 @@ function startCar() {
   if (event.key !== ' ') {
     return;
   }
-  console.log('a space');
+  $carContainer.style.left = coordinates.x + 'px';
+  $carContainer.style.top = coordinates.y + 'px';
 }
