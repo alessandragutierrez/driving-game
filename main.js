@@ -26,6 +26,7 @@ function startCar() {
     return;
   }
   var intervalID = setInterval(function () {
+    data.carOn = true;
     data.xCoordinates += 5;
     $carContainer.style.left = data.xCoordinates + 'px';
     $carContainer.style.top = data.yCoordinates + 'px';
