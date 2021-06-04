@@ -1,12 +1,13 @@
-/* global coordinates */
+/* global data */
 
 var $carContainer = document.querySelector('.car-container');
 var $car = document.querySelector('img');
+var intervalID;
 
 document.addEventListener('keydown', moveCar);
 function moveCar(event) {
   turnCar();
-  startCar();
+  startAndStopCar();
 }
 
 function turnCar() {
@@ -21,13 +22,19 @@ function turnCar() {
   }
 }
 
-function startCar() {
+function startAndStopCar() {
   if (event.key !== ' ') {
     return;
   }
-  var intervalID = setInterval(function () {
-    coordinates.x = coordinates.x + 5;
-    $carContainer.style.left = coordinates.x + 'px';
-    $carContainer.style.top = coordinates.y + 'px';
-  }, 16);
+  if (data.carOn === false) {
+    intervalID = setInterval(function () {
+      data.xCoordinates += 5;
+      $carContainer.style.left = data.xCoordinates + 'px';
+      $carContainer.style.top = data.yCoordinates + 'px';
+    }, 16);
+    data.carOn = true;
+  } else {
+    clearInterval(intervalID);
+    data.carOn = false;
+  }
 }

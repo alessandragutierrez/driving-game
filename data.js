@@ -1,6 +1,7 @@
-/* exported coordinates */
+/* exported data */
 
-var coordinates = {
-  x: 0,
-  y: 0
+var data = {
+  xCoordinates: 0,
+  yCoordinates: 0,
+  carOn: false
 };
