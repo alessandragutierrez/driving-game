@@ -28,11 +28,11 @@ function startAndStopCar() {
   }
   if (data.carOn === false) {
     intervalID = setInterval(function () {
-      data.carOn = true;
       data.xCoordinates += 5;
       $carContainer.style.left = data.xCoordinates + 'px';
       $carContainer.style.top = data.yCoordinates + 'px';
     }, 16);
+    data.carOn = true;
   } else {
     clearInterval(intervalID);
     data.carOn = false;
