@@ -19,7 +19,11 @@ body {
 
 img {
   width: 100%;
-  transition: 0.5s;
+  transition: 0.3s;
+}
+
+img.face-right {
+  transform: rotate(360deg);
 }
 
 img.face-up {
